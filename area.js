@@ -1,4 +1,5 @@
 function area(l,b){
-    console.log(l*b);
+    return l*b;
   }
   let areaofrectangle = area(10,5);
+  console.log(areaofrectangle);
