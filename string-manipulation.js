@@ -16,6 +16,6 @@ function reversedString(str){
     return reversedstr;
 };
 
-let string = "hello"
-let reverse = reversedString(string);
+let string1 = "hello"
+let reverse = reversedString(string1);
 console.log(reverse);
