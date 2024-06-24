@@ -10,7 +10,7 @@ console.log(reversedString);
 //loop
 function reversedString(str){
     let reversedstr = '';
-    for (let i = str.length-1; i >=0){
+    for (let i = str.length-1; i >=0;){
         reversedstr +=str[i];
     }
     return reversedstr;
