@@ -8,7 +8,7 @@ let car = {
 }
 
 function startEngine(){
-    console.log("Enginr Started")
+    console.log("Engine Started")
 }
 
 console.log(car);
