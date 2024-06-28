@@ -8,7 +8,7 @@
 //CPU Task Scheduling
 //Callback queue in javascript
 
-class queue {
+class Queue {
     constructor(){
         this.items = []
     }
@@ -29,4 +29,18 @@ class queue {
         }
         return null
     }
+    size(){
+        return this.items.length
+    }
+    print(){
+        console.log(this.items.toString())
+    }
 }
+
+const queue = new Queue()
+console.log(queue.isEmpty())
+
+queue.enqueue(10)
+queue.enqueue(20)
+queue.enqueue(30)
+queue.enqueue(40)
