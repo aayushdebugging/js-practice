@@ -63,6 +63,3 @@ list.prepend(40)
 console.log('List is Empty?',list.isEmpty())
 console.log('List Size',list.getSize())
 list.print()
-
-
-
