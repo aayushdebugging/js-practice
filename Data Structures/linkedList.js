@@ -2,6 +2,10 @@
 // A linked list is a linear data structure that includes a series of connected nodes
 // ImageViewer
 
+// All applications of both stack and queues are application of linked list 
+// A linked list is a linear data structure that includes a series of connected nodes
+// ImageViewer
+
 class Node {
     constructor(value){
         this.value =  value
@@ -21,9 +25,27 @@ class LinkedList{
     getSize(){
         return this.size
     }
+    prepend(value){
+        const node = new Node(value)
+        if(this.isEmpty()){
+            this.head = node
+        }else{
+            node.next = this.head
+            this.head = node
+        }
+        this.size++
+    }
 }
 
 const list = new LinkedList()
 console.log('List is Empty?',list.isEmpty())
 console.log('List Size',list.getSize())
+list.prepend(10)
+list.prepend(20)
+list.prepend(30)
+list.prepend(40)
+console.log('List is Empty?',list.isEmpty())
+console.log('List Size',list.getSize())
+
+
 
