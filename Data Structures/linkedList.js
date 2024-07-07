@@ -25,6 +25,8 @@ class LinkedList{
     getSize(){
         return this.size
     }
+
+    // O(1)
     prepend(value){
         const node = new Node(value)
         if(this.isEmpty()){
@@ -34,6 +36,40 @@ class LinkedList{
             this.head = node
         }
         this.size++
+    }
+    
+    //O(N)
+    append(){
+        const node = new Node(value)
+        if(this.isEmpty()){
+            this.head = node
+        }else{
+            let prev = this.head
+            while(prev.next){
+                prev = prev.next
+            }
+            prev.next = node
+        }
+        this.size++
+    }
+
+
+    insert(value,index){
+        if(index<0 || index>this.size){
+            return
+        }
+        if(index==0){
+            this.prepend(value)
+        }else{
+            const node = new Node(value)
+            let prev = this.head
+            for(let i = 0;i<this.size;i++){
+                prev = prev.next
+            }
+            node.next = prev.next
+            prev.next = node
+            this.size++
+        }
     }
 
     print(){
@@ -63,3 +99,4 @@ list.prepend(40)
 console.log('List is Empty?',list.isEmpty())
 console.log('List Size',list.getSize())
 list.print()
+
