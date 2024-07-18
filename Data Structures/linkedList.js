@@ -71,7 +71,7 @@ class LinkedList{
             this.size++
         }
     }
-
+    //remove particular index 
     removeFrom(index){
         if(index<0 || index>=this.size){
             return null
@@ -82,7 +82,7 @@ class LinkedList{
             this.head = this.head.next
         }else{
 
-            
+
             let prev = this.head
             for(let i = 0;i<index-1;i++){
                 prev = prev.next
@@ -94,6 +94,29 @@ class LinkedList{
         }
         this.size--
         return removedNode.value
+    }
+
+    //remove particular value
+    removeValue(value){
+        if(this.isEmpty()){
+            return null
+        }if(this.head.value === value){
+            this.head.next = this.head
+            this.size--
+            return value
+        }else{ //change previous.next = removed.next
+            let prev = this.head
+            while(prev.next && prev.next.value!== value){
+                prev = prev.next
+            }
+            if(prev.next){
+                removedNode = prev.next
+                prev.next = removedNode.next
+                this.size--
+                return value
+            }
+            return null
+        }
     }
 
     print(){
