@@ -110,7 +110,7 @@ class LinkedList{
                 prev = prev.next
             }
             if(prev.next){
-                removedNode = prev.next
+                const removedNode = prev.next
                 prev.next = removedNode.next
                 this.size--
                 return value
