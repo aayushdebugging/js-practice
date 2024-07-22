@@ -119,6 +119,42 @@ class LinkedList{
         }
     }
 
+//Search method in a Linked List
+    search(value){
+        if(this.isEmpty()){
+            return -1
+        }
+        let i = 0
+        let curr = this.head
+        while(curr){
+            if(curr.value === value){
+                return i
+            }
+            curr = curr.next
+            i++
+        }
+        return -1 
+    }
+
+
+
+    //reverse linkedList
+    reverse(){
+        let prev = null
+        let curr = this.head
+        while(curr){
+            let next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+        }
+        this.head = prev
+
+    }
+
+
+
+
     print(){
         if(this.isEmpty()){
             console.log('List is Empty')
